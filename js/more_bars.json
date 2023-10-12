@@ -1,0 +1,26 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 500,
+    "height": 300,
+    "data": {"url": "https://raw.githubusercontent.com/stanley-monash/A2/main/data/aggregate.csv"},
+    "mark": {"type": "bar", "cornerRadiusTopLeft": 3, "cornerRadiusTopRight": 3},
+    "encoding": {
+      "x": {"timeUnit": "year", "field": "Year", "type": "ordinal"},
+      "y": {"aggregate": "mean","field":"Perceptions_of_corruption"},
+      "color": {"field": "Continent"},
+      "tooltip": [
+        {
+            "field": "Continent",
+            "type": "nominal"
+        },
+        {
+            "field": "Perceptions_of_corruption",
+            "type": "quantitative",
+            "aggregate": "mean",
+            "format": ".2f",
+            "title": "mean perception"
+        }
+    ]
+    }
+   
+  }

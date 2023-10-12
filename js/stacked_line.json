@@ -1,0 +1,76 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Stock prices of 5 Tech Companies over Time.",
+    "data": {
+        "url": "https://raw.githubusercontent.com/stanley-monash/A2/main/data/aggregate.csv"
+    },
+    "width": 500,
+    "height": 300,
+    "layer": [
+        {
+            "mark": {
+                "type": "line",
+                "point": true,
+                "tooltip": true
+            },
+            "encoding": {
+                "x": {
+                    "timeUnit": "year",
+                    "field": "Year",
+                    "title": "Year"
+                },
+                "y": {
+                    "aggregate": "mean",
+                    "field": "Social_support",
+                    "type": "quantitative"
+                },
+                "color": {
+                    "field": "Continent",
+                    "type": "nominal"
+                },
+                "tooltip": [
+                    {
+                        "field": "Continent",
+                        "type": "nominal"
+                    }
+                ]
+            }
+        },
+        {
+            "mark": {
+                "type": "text",
+                "align": "right",
+                "baseline": "middle",
+                "dx": -12,
+                "fontSize": 11.5,
+                "fontStyle": "italic"
+            },
+            "encoding": {
+                "text": {
+                    "field": "Country_or_region",
+                    "type": "nominal"
+                },
+                "color": {
+                    "value": "black"
+                },
+                "opacity": {
+                    "condition": {
+                        "test": "datum['Year'] == '2019' || datum['Year'] == '2018' || datum['year'] == '2017' || datum['Year'] == '2016' || datum['Year'] == '2015'",
+                        "value": 1
+                    },
+                    "value": 0
+                },
+                "tooltip": [
+                    {
+                        "field": "Continent",
+                        "type": "nominal"
+                    },
+                    {
+                        "field": "Year",
+                        "type": "ordinal"
+                    }
+                ]
+            }
+        }
+    ]
+}

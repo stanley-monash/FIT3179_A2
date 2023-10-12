@@ -1,0 +1,29 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 500, "height": 300,
+  "data": {"url": "https://raw.githubusercontent.com/stanley-monash/A2/main/data/aggregate.csv"},
+  "mark": "area",
+  "encoding": {
+    "x": {
+      "timeUnit": "year", "field": "Year",
+      "axis": {"format": "%Y"}
+    },
+    "y": {
+      "aggregate": "mean", "field": "Freedom_to_make_life_choices", "type": "quantitative"
+    },
+    "color": {
+      "field": "Continent",
+      "scale": {"scheme": "category20b"}
+    },
+    "tooltip": [
+      {"field": "Continent", "type": "nominal"},
+      {
+        "field": "Freedom_to_make_life_choices",
+        "type": "quantitative",
+        "aggregate": "mean",
+        "format": ".2f",
+        "title": "freedom"
+    }
+    ]
+  }
+}
