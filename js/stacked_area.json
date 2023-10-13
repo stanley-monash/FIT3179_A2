@@ -5,11 +5,11 @@
   "mark": "area",
   "encoding": {
     "x": {
-      "timeUnit": "year", "field": "Year",
+      "timeUnit": "year", "field": "Year","title":"Year",
       "axis": {"format": "%Y"}
     },
     "y": {
-      "aggregate": "mean", "field": "Freedom_to_make_life_choices", "type": "quantitative"
+      "aggregate": "mean", "field": "Freedom_to_make_life_choices", "type": "quantitative", "title":"Freedom to make choices"
     },
     "color": {
       "field": "Continent",

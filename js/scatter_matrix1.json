@@ -5,10 +5,10 @@
       "Score"
     ],
     "column": [
-      "Social_support",
-    "Healthy_life_expectancy",
-    "Freedom_to_make_life_choices",
-    "Perceptions_of_corruption"
+      "Social Support Score",
+    "Life Expectancy Score",
+    "Freedom Score",
+    "Corruption Perception Score"
     ]
   },
   "params": [
@@ -41,7 +41,11 @@
   "transform": [
     {
       "filter": "Continent_selection == null || datum.Continent == Continent_selection"
-    }
+    },
+    {"calculate": "replace(datum['Social_support'], '_', ' ')", "as": "Social Support Score"},
+    {"calculate": "replace(datum['Healthy_life_expectancy'], '_', ' ')", "as": "Life Expectancy Score"},
+    {"calculate": "replace(datum['Freedom_to_make_life_choices'], '_', ' ')", "as": "Freedom Score"},
+    {"calculate": "replace(datum['Perceptions_of_corruption'], '_', ' ')", "as": "Corruption Perception Score"}
   ],
   "spec": {
     "data": {
@@ -82,9 +86,11 @@
         "field": {
           "repeat": "row"
         },
+        
         "type": "quantitative",
         "axis": {
-          "minExtent": 30
+          "minExtent": 30,
+          "title": "Happiness score"
         }
       },
       "color": {

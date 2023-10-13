@@ -5,8 +5,8 @@
     "data": {"url": "https://raw.githubusercontent.com/stanley-monash/FIT3179_A2/main/data/aggregate.csv"},
     "mark": {"type": "bar", "cornerRadiusTopLeft": 3, "cornerRadiusTopRight": 3},
     "encoding": {
-      "x": {"timeUnit": "year", "field": "Year", "type": "ordinal"},
-      "y": {"aggregate": "mean","field":"Perceptions_of_corruption"},
+      "x": {"timeUnit": "year", "field": "Year", "type": "ordinal", "title": "Year"},
+      "y": {"aggregate": "mean","field":"Perceptions_of_corruption", "title":"Perception Of Corruption"},
       "color": {"field": "Continent"},
       "tooltip": [
         {

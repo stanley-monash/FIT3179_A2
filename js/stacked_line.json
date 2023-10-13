@@ -22,7 +22,8 @@
                 "y": {
                     "aggregate": "mean",
                     "field": "Social_support",
-                    "type": "quantitative"
+                    "type": "quantitative",
+                    "title": "Social Support"
                 },
                 "color": {
                     "field": "Continent",

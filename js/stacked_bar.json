@@ -7,7 +7,7 @@
     "layer": [
        {"mark": "bar",
         "encoding": {
-          "x": {"aggregate": "mean", "field": "Healthy_life_expectancy", "type": "quantitative", "stack": "zero","title":"life expectancy"},
+          "x": {"aggregate": "mean", "field": "Healthy_life_expectancy", "type": "quantitative", "stack": "zero","title":"Healthy Life Expectancy"},
           "y": {"field": "Year", "type": "ordinal"},
           "color": {"field": "Continent", "type": "nominal"},
           "tooltip": [
