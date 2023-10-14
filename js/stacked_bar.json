@@ -9,7 +9,25 @@
         "encoding": {
           "x": {"aggregate": "mean", "field": "Healthy_life_expectancy", "type": "quantitative", "stack": "zero","title":"Healthy Life Expectancy"},
           "y": {"field": "Year", "type": "ordinal"},
-          "color": {"field": "Continent", "type": "nominal"},
+          "color": {"field": "Continent", "type": "nominal",
+          "scale": {
+            "domain": [
+              "North America",
+              "South America",
+              "Europe",
+              "Africa",
+              "Asia",
+              "Oceania"
+            ],
+            "range": [
+              "#4477AA",
+              "#228833",
+              "#CCBB44",
+              "#EE6677",
+              "#AA3377",
+              "#66CCEE"
+            ]
+          }},
           "tooltip": [
             {"field": "Continent", "type": "nominal"},
             {

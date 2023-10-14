@@ -2,8 +2,8 @@
     "$schema": "https://vega.github.io/schema/vega/v5.json",
     "background": "white",
     "padding-left":100,
-    "width": 650,
-    "height": 325,
+    "width": 750,
+    "height": 400,
     "title": {
       "text": "GDP per capita around the world",
       "fontSize": 14,

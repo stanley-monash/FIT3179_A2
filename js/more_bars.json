@@ -7,7 +7,24 @@
     "encoding": {
       "x": {"timeUnit": "year", "field": "Year", "type": "ordinal", "title": "Year"},
       "y": {"aggregate": "mean","field":"Perceptions_of_corruption", "title":"Perception Of Corruption"},
-      "color": {"field": "Continent"},
+      "color": {"field": "Continent","scale": {
+        "domain": [
+          "North America",
+          "South America",
+          "Europe",
+          "Africa",
+          "Asia",
+          "Oceania"
+        ],
+        "range": [
+          "#4477AA",
+          "#228833",
+          "#CCBB44",
+          "#EE6677",
+          "#AA3377",
+          "#66CCEE"
+        ]
+      }},
       "tooltip": [
         {
             "field": "Continent",

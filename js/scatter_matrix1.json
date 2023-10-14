@@ -52,6 +52,8 @@
       "url": "https://raw.githubusercontent.com/stanley-monash/FIT3179_A2/main/data/aggregate.csv"
     },
     "width": 250, "height": 150,
+    "layer":[
+      {
     "mark": "point",
     "params": [
       {
@@ -94,13 +96,31 @@
         }
       },
       "color": {
-        "condition": {
-          "param": "brush",
-          "field": "Continent",
-          "type": "nominal"
-        },
-        "value": "grey"
+        "field": "Continent",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "North America",
+          "South America",
+          "Europe",
+          "Africa",
+          "Asia",
+          "Oceania"
+        ],
+        "range": [
+          "#4477AA",
+          "#228833",
+          "#CCBB44",
+          "#EE6677",
+          "#AA3377",
+          "#66CCEE"
+        ]
+      }
       }
     }
   }
+  ]
+  }
+  
+  
 }

@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 550,
-    "height": 325,
+    "width": 600,
+    "height": 350,
     "background": "white",
     "title": {
       "text": "Happiness score in relations to GDP",
@@ -99,12 +99,12 @@
                 "Oceania"
               ],
               "range": [
-                "#e41a1c",
-                "#984ea3",
-                "#ff7f00",
-                "#a6cee3",
-                "#377eb8",
-                "#a65628"
+                "#4477AA",
+                "#228833",
+                "#CCBB44",
+                "#EE6677",
+                "#AA3377",
+                "#66CCEE"
               ]
             }
           },
